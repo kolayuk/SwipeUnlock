@@ -1,0 +1,114 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Definition for Image Frame packaging formats.
+// Desribes the relation to CCamera::Format and FOURCC codes.
+// 
+//
+
+/**
+ @file
+ @publishedAll
+ @released
+*/
+
+
+#ifndef IMAGEFRAMEFORMATS_HRH
+#define IMAGEFRAMEFORMATS_HRH
+
+/** 
+Defines the numerical value for KUidFormatYUVMonochrome.
+ @see KUidFormatYUVMonochrome
+*/
+#define KFormatYUVMonochromeUidValue		0x10273763
+
+/** 
+Defines the numerical value for KUidFormat16bitRGB444Interleaved.
+ @see KUidFormat16bitRGB444Interleaved
+*/
+#define KFormat16bitRGB444InterleavedUidValue		0x10273764		
+
+/** 
+Defines the numerical value for KUidFormat16BitRGB565Interleaved.
+ @see KUidFormat16BitRGB565Interleaved
+*/
+#define KFormat16BitRGB565InterleavedUidValue		0x10273765		
+
+/** 
+Defines the numerical value for KUidFormat32BitRGB888Interleaved.
+ @see KUidFormat32BitRGB888Interleaved
+*/
+#define KFormat32BitRGB888InterleavedUidValue		0x10273766		
+		
+/** 
+Defines the numerical value for KUidFormatYUV420Interleaved.
+ @see KUidFormatYUV420Interleaved
+*/
+#define KFormatYUV420InterleavedUidValue 		0x10273767
+
+/** 
+Defines the numerical value for KUidFormatYUV420Planar.
+ @see KUidFormatYUV420Planar
+*/
+#define KFormatYUV420PlanarUidValue			0x10273768
+
+/** 
+Defines the numerical value for KUidFormatYUV422Interleaved.
+ @see KUidFormatYUV422Interleaved
+*/
+#define KFormatYUV422InterleavedUidValue		0x10273769
+
+/** 
+Defines the numerical value for KUidFormatYUV422InterleavedReversed.
+ @see KUidFormatYUV422InterleavedReversed
+*/
+#define KFormatYUV422InterleavedReversedUidValue	0x1027376A
+
+/** 
+Defines the numerical value for KUidFormatYYUV422Interleaved.
+ @see KUidFormatYYUV422Interleaved
+*/
+#define KFormatYYUV422InterleavedUidValue	0x102737D9
+
+/** 
+Defines the numerical value for KUidFormatYUV422Planar.
+ @see KUidFormatYUV422Planar
+*/
+#define KFormatYUV422PlanarUidValue	0x102737DA
+
+/** 
+Defines the numerical value for KUidFormatYUV444Planar.
+ @see KUidFormatYUV444Planar
+*/
+#define KFormatYUV444PlanarUidValue		0x102737DB
+
+/** 
+Defines the numerical value for KUidFormatYUV444Interleaved.
+ @see KUidFormatYUV444Interleaved
+*/
+#define KFormatYUV444InterleavedUidValue		0x1027376B
+
+/** 
+Defines the numerical value for KUidFormatYUV420SemiPlanar.
+ @see KUidFormatYUV420SemiPlanar
+*/
+#define KFormatYUV420SemiPlanarUidValue	  		0x1027376C  	
+
+/** 
+Defines the numerical value for KUidFormatYUV420PlanarReversed.
+ @see KUidFormatYUV420PlanarReversed
+*/
+#define KFormatYUV420PlanarReversedUidValue 		0x1027376D
+
+
+#endif // IMAGEFRAMEFORMATS_HRH

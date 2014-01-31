@@ -1,0 +1,45 @@
+/*
+* ==============================================================================
+*  Name        : animation_server.mmp
+*  Part of     : Animation example
+*  Interface   :
+*  Description :
+*  Version     :
+*
+*  Copyright (c) 2004 - 2006 Nokia Corporation.
+*  This material, including documentation and any related
+*  computer programs, is protected by copyright controlled by
+*  Nokia Corporation.
+* ==============================================================================
+*/
+
+TARGET          SwipeUnlockAnim.dll
+TARGETTYPE      ani
+
+// The second one is the UID of the server, different than main program's UID
+
+// 0x2005FC7F - swipeUnlock
+// 0x20067b11 - jellyunlock
+UID             0x10003b22 0x2005FC7F
+
+SECUREID	    0xA000022B
+EPOCSTACKSIZE	0x5000
+
+SOURCEPATH      ..\src
+SOURCE          ServerDll.cpp
+SOURCE          ServerImage.cpp propertyobserver.cpp
+
+USERINCLUDE     ..\inc
+USERINCLUDE     ..\..\gui\inc
+SYSTEMINCLUDE   \epoc32\include
+
+LIBRARY         euser.lib flogger.lib
+
+LANG            SC
+
+CAPABILITY      PowerMgmt ReadDeviceData WriteDeviceData ProtServ
+VENDORID        0
+
+EXPORTUNFROZEN
+
+// End of File

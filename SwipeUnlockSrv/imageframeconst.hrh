@@ -1,0 +1,105 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Definition for Image Frame const.
+// 
+//
+
+/**
+ @file
+ @publishedAll
+ @released
+*/
+
+#ifndef IMAGEFRAMECONST_HRH
+#define IMAGEFRAMECONST_HRH
+
+/** 
+Defines the numerical value for KUidOptionConvertFrame.
+ @see KUidOptionConvertFrame
+*/
+#define KOptionConvertFrameUidValue 		0x1027376F
+
+/** 
+Defines the numerical value for KUidOptionContinueConvertFrame.
+ @see KUidOptionContinueConvertFrame
+*/
+#define KOptionContinueConvertFrameUidValue 0x102737F6
+
+/** 
+Defines the numerical value for KUidRecommendBufferSize.
+ @see KUidRecommendBufferSize
+*/
+#define KOptionRecommendBufferSizeUidValue 	0x10273770
+
+/** 
+Defines the numerical value for KUidIclImageFrameFormat.
+ @see KUidIclImageFrameFormat 
+*/
+#define KIclImageFrameFormatUidValue		0x10273755
+
+/** 
+Defines the numerical value for KUidIclImageFrameLayout.
+ @see KUidIclImageFrameLayout 
+*/
+#define KIclImageFrameLayoutUidValue		0x10273756
+
+/** 
+Defines the numerical value for KUidColourSpaceYCbCr.
+ @see KUidColourSpaceYCbCr 
+*/
+#define KColourSpaceYCbCrUidValue		0x10273781
+
+/** 
+Defines the numerical value for KUidColourSpaceYUV.
+ @see KUidColourSpaceYUV
+*/
+#define KColourSpaceYUVUidValue			0x10273782
+
+/** 
+Defines the numerical value for KUidColourSpaceRGB.
+ @see KUidColourSpaceRGB
+*/
+#define KColourSpaceRGBUidValue			0x10273783
+
+/** 
+Defines the numerical value for KUidSamplingMonochrome.
+ @see KUidSamplingMonochrome
+*/
+#define KSamplingMonochromeUidValue		0x10273784
+
+/** 
+Defines the numerical value for KUidSamplingColor444.
+ @see KUidSamplingColor444
+*/
+#define KSamplingColor444UidValue		0x10273785
+
+/** 
+Defines the numerical value for KUidSamplingColor422.
+ @see KUidSamplingColor422
+*/
+#define KSamplingColor422UidValue		0x10273786
+
+/** 
+Defines the numerical value for KUidSamplingColor420.
+ @see KUidSamplingColor420
+*/
+#define KSamplingColor420UidValue		0x10273787
+
+/** 
+Defines the numerical value for KUidSamplingColor411.
+ @see KUidSamplingColor411
+*/
+#define KSamplingColor411UidValue		0x10273788
+
+#endif // IMAGEFRAMECONST_HRH

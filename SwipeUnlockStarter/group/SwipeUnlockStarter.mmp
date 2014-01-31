@@ -1,0 +1,31 @@
+/*
+============================================================================
+ Name		: SwipeUnlockStarter.mmp
+ Author	  : Usanov-Kornilov Nikolay (aka Kolay)
+ Copyright   : 
+Contacts:
+	kolayuk@mail.ru
+	http://kolaysoft.ru
+
+(c) KolaySoft, 2011
+
+ Description : This is the project specification file for SwipeUnlockStarter.
+============================================================================
+*/
+
+TARGET		  SwipeUnlockStarter.exe
+TARGETTYPE	  exe
+// 0x2005fc7d - swipeunlock
+// 0x20067b12 - jellyunlock
+UID			 0 0x2005fc7d
+
+USERINCLUDE	 ..\inc
+SYSTEMINCLUDE   \epoc32\include
+
+SOURCEPATH	  ..\src
+SOURCE		  SwipeUnlockStarter.cpp Application.cpp ProcessMonitor.cpp
+
+LIBRARY		 euser.lib apgrfx.lib apparc.lib
+CAPABILITY 	ReadDeviceData
+
+DEBUGGABLE_UDEBONLY

@@ -1,0 +1,21 @@
+/*
+============================================================================
+ Name		: bld.inf
+ Author	  : Usanov-Kornilov Nikolay (aka Kolay)
+ Copyright   : 
+Contacts:
+	kolayuk@mail.ru
+	http://kolaysoft.ru
+
+(c) KolaySoft, 2011
+
+ Description : This file provides the information required for building the
+				whole of a SwipeUnlockStarter.
+============================================================================
+*/
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_MMPFILES
+SwipeUnlockStarter.mmp

@@ -1,0 +1,74 @@
+#ifndef APPLICATION_H
+#define APPLICATION_H
+
+#include <QObject>
+#include <QTimer>
+#include <qmlapplicationviewer.h>
+
+#ifdef Q_OS_SYMBIAN
+#include <FgrObserver.h>
+#include <CenRepObserver.h>
+#include <apgwgnam.h>
+#include "statusbarinfo.h"
+#include "playercontroller.h"
+#include <notifyprovider.h>
+#include <aknkeylock.h>
+#endif
+#include <localizer.h>
+#include <QSettings>
+#include <QThread>
+#include <e32base.h>
+#ifdef Q_OS_SYMBIAN
+class Application : public QThread, public MFgrCallBack,public MCRCallBack
+#else
+class Application : public QThread
+#endif
+{
+    Q_OBJECT
+    QSettings* settings;
+#ifdef Q_OS_SYMBIAN
+    CFgrObserver* iObserver;
+    void run();
+    CCenRepObserver* iCR;
+    RWsSession* iSession;
+    void GroupListChanged();
+    void ScreenChanged();
+    void ValueChanged(TInt aValue,TInt aErr);
+    void KeyCaptured(TWsEvent aEvent);
+    int iLocked;
+    void Show();
+    QList<int> iHandles;
+    TUid iFg;
+    QTimer* iAfterLockTimer;
+    StatusBarInfo* status;
+    QTimer* iTimer;
+    QTimer* startObservingTimer;
+    QTime iLockTime;
+    QTimer* iKeyEventWaiter;
+    bool iWasKeyEvent;
+
+#endif
+    QmlApplicationViewer& viewer;
+public:
+    Localizer* loc;
+    explicit Application(QmlApplicationViewer& v,QObject *parent = 0);
+    Q_INVOKABLE void Hide();
+    PlayerController* iPlayer;
+    NotifyProvider* iNotifications;
+    Q_INVOKABLE void restartTimer();
+signals:
+    void Sleep();
+    void unSleep();
+    void update(QString screen,int index);
+    void setToZero();
+    void updateStatusBar(int battery,int charging,int network_signal,QString opsos,int mode,int profile,int bt);
+public slots:
+    void onExit();
+    void Tick();
+    void AfterLock();
+    void startObserving();
+    void waitKeyEvent();
+    void Unlock();
+};
+
+#endif // APPLICATION_H
